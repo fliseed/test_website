@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink }  from 'react-router-dom';
 import Header from '../components/Header';
 import Papa from 'papaparse';
 
@@ -28,9 +29,8 @@ export default function Articles() {
   
         <ul>
           {articles.map((article, index) => (
-            <li key={index}>
-              {article.article_name} by {article.author}
-            </li>
+            <li key={index}><NavLink to={`/articles/${article.article_weblink}`} key={index}>
+              {article.article_name}</NavLink> by {article.author}</li>
           ))}
         </ul>
       </div>

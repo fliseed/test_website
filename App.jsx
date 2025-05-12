@@ -6,7 +6,6 @@ import About from './pages/About';
 import Articles from './pages/Articles';
 import Papa from 'papaparse';
 import ArticlePage from './pages/ArticlePage';
-import ArticlesList from './pages/ArticlesList'; // Assuming you have a data file with articles
 
 
 function App() {
