@@ -8,7 +8,7 @@ export default function Home() {
             <Header />
             <h1>Home Page</h1>
             <p>Welcome to the homepage!</p>
-            <NavLink to="/about">Go to About page</NavLink>
+            <NavLink to="/articles">Go to Articles page</NavLink>
         </div>
     );
   }
