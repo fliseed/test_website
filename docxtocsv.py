@@ -126,7 +126,7 @@ def process_paragraph_content(paragraph):
 
 def upload_csv(text = "", article_id = 1):
     # Read all rows
-    with open("pages/articles/articles.csv", 'r', newline='') as f:
+    with open("/articles/articles.csv", 'r', newline='') as f:
         reader = list(csv.reader(f))
 
     # Modify matching row
@@ -135,13 +135,13 @@ def upload_csv(text = "", article_id = 1):
             row.append(text)
 
     # Write updated rows back to file
-    with open("pages/articles/articles.csv", 'w', newline='') as f:
+    with open("/articles/articles.csv", 'w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL, escapechar='\\')
         writer.writerows(reader)
 
 
 def clear_content_csv():
-    with open("pages/articles/articles.csv", 'r', newline='') as f:
+    with open("/articles/articles.csv", 'r', newline='') as f:
         reader = list(csv.reader(f))
     
     content_id = reader[0].index('content')
@@ -152,7 +152,7 @@ def clear_content_csv():
             if reader[row][content_id] != '':
                 reader[row].remove(reader[row][content_id])
     
-    with open("pages/articles/articles.csv", 'w', newline='') as f:
+    with open("/articles/articles.csv", 'w', newline='') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL, escapechar='\\')
         writer.writerows(reader)
 
@@ -166,7 +166,7 @@ def extract_images(docx_path, output_dir="images"):
 
     
     if os.path.exists(media_path):
-        os.makedirs(f"pages/articles/{output_dir}", exist_ok=True)
+        os.makedirs(f"/articles/{output_dir}", exist_ok=True)
         for i, file in enumerate(sorted(os.listdir(media_path))):
             image_dest = os.path.join(f"pages/articles/{output_dir}", file)
             shutil.copy(os.path.join(media_path, file), image_dest)
