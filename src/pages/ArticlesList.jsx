@@ -6,7 +6,7 @@ export default function ArticlesList() {
   
     useEffect(() => {
       // Fetch the CSV file from the public folder
-      fetch('/pages/articles/articles.csv')
+      fetch('/articles/articles.csv')
         .then(response => response.text())
         .then(csvText => {
           const parsed = Papa.parse(csvText, { header: true });

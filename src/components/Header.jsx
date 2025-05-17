@@ -5,17 +5,9 @@ export default function Header() {
     return (
       <header>
         <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/articles">Articles</NavLink>
-            </li>
-          </ul>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/articles">Articles</NavLink>
         </nav>
       </header>
     );

@@ -20,7 +20,8 @@ export default function ArticlePage() {
             <p>by {article.author}</p>
             <p>{article.date}</p>
            {/*main body*/} 
-           <div>{parse(article.content)}</div> 
+           <div>{article.content ? parse(article.content) 
+           : <p><em>Content is missing</em></p>}</div> 
         </div>
     );
   }

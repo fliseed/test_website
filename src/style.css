@@ -1,3 +1,93 @@
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/AncizarSerif-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400; /* Normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/AncizarSerif-Italic-VariableFont_wght.ttf') format('truetype'); 
+  font-weight: 400; /* Normal */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/static/AncizarSerif-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/static/AncizarSerif-BoldItalic.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/static/AncizarSerif-Light.ttf') format('truetype');
+  font-weight: 200; /* Normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ancizar-Serif';
+  src: url('/Ancizar_Serif/static/AncizarSerif-LightItalic.ttf') format('truetype');
+  font-weight: 200; /* Normal */
+  font-style: italic;
+  font-display: swap;
+}
+
+
+:root {
+  font-family: 'Ancizar-Serif';
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --darkest-color: #033F63;
+  --mid_dark-color: #28666E;
+  --medium-color: #7C9885;
+  --mid_light-color: #B5B682;
+  --lightest-color: #FEDC97;
+}
+
+body {
+  margin: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mid_dark-color);
+  margin: 0;
+  padding: 1rem 0rem;
+}
+header a {
+  color: var(--background-color);
+  text-decoration: none;
+  font-family: 'Ancizar-Serif';
+  font-size: 1.2rem;
+  background-color: var(--mid_dark-color);
+  border: none;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+header a:hover {
+  background-color: var(--mid_light-color);
+  cursor: pointer;
+  color: var(--darkest-color);
+}
+
+
+/*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -94,3 +184,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/

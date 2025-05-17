@@ -8,11 +8,14 @@ export default function Articles() {
   
     useEffect(() => {
       // Fetch the CSV file from the public folder
-      fetch('/pages/articles/articles.csv')
+      fetch('/articles/articles.csv')
         .then(response => response.text())
         .then(csvText => {
           const parsed = Papa.parse(csvText, { header: true });
-          setArticles(parsed.data);
+          const filtered = parsed.data.filter(row => 
+            Object.values(row).some(field => field && field.trim() !== '')
+          );
+          setArticles(filtered);
         })
         .catch(error => {
           console.error('Error loading CSV:', error);
