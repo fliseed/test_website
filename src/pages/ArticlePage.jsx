@@ -20,7 +20,7 @@ export default function ArticlePage() {
             <p>by {article.author}</p>
             <p>{article.date}</p>
            {/*main body*/} 
-           <p>{parse(article.content)}</p> 
+           <div>{parse(article.content)}</div> 
         </div>
     );
   }
